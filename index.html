@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>The Most Stunning Fashion Websites</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+h1{ 
+  text-align:center;
+  font-size:170%;
+  color:#800000;
+  position: relative;
+  top: 470px;
+}
+.f {
+  font-weight:bold;
+  font-family:verdana;
+  color:#ff5189;
+  float: right;
+  margin-left:15px;
+  margin-top:0px;
+}
+
+
+body{
+  background-image: url("I.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+}
+input[type=text],input[type=password],input[type=tel],input[type=submit],input[type=email]{
+  width: 100%;
+  padding: 5px 10px;
+  margin: 4px 0;
+  box-sizing: border-box;
+  border: 2px solid hsla(0, 100%, 70%, 0.3);
+  border-radius: 4px;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+.active {
+  background-color: pink;
+}
+
+</style>
+</head>
+<body>
+<ul>
+  <li><a href="file:///C:/Users/Yara.PASSANTOTA.000/Desktop/project/y.html" class="active">Home</a></li>
+  <li><a href="file:///C:/Users/Yara.PASSANTOTA.000/Desktop/project/VOGUE-ESSENCE.html">VOGUE-ESSENCE</a></li>
+  <li><a href="file:///C:/Users/Yara.PASSANTOTA.000/Desktop/project/ZARA-DIOR.html">ZARA-DIOR</a></li>
+  <li><a href="file:///C:/Users/Yara.PASSANTOTA.000/Desktop/project/ELLE-H&M.html">ELLE-H&M</a></li>
+  <li><a href="file:///C:/Users/Yara.PASSANTOTA.000/Desktop/project/GUCCI-PRADA.html">GUCCI-PRADA</a></li>
+</ul>
+<h1>The Most Stunning Fashion Sites on the web</h1>
+<form class="f" onsubmit="return checkPassword(this);" action="/action_page.php">
+ <label for="fname">First Name</label><br>
+  <input type="text" id="fname" name="fname" required><br>
+ <label for="lname">Last Name</label><br>
+  <input type="text" id="lname" name="lname" required><br>
+ <label for="email">E-mail</label><br>
+  <input type="email" id="email" name="email" required><br>
+ <label for="pw">Password</label><br>
+  <input type="password" id="pw" name="pw" title="It must contain 8 characters starting with uppercase letter and including at least one digit, one of these special character (#,*,_,&,-) and no spaces." required><br>
+ <lable for="phone">Mobile phone number</label><br>
+  <input type="tel" id="phone" name="phone" pattern="[0]{1}[1]{1}[0-9]{9}" required><br>
+ <label for="ads">Address</label><br>
+  <input type="text" id="ads" name="ads" required><br>
+ <input type="radio" id="male" name="gender" value="male" required>
+  <label for="male">Male</label><br>
+ <input type="radio" id="female" name="gender" value="female" required>
+  <label for="female">Female</label><br><br>
+ <input type="submit" value="Submit">
+</form> 
+<h5 style="color:white;text-align:center;"><pre>
+Please enter your 
+data so we can send
+you our latest 
+notification.<pre></h5>
+<script type="text/javascript">
+
+  function checkPassword(form)
+  {
+      if(form.pw.value.length != 8) {
+        alert("Error: password must contain 8 characters!");
+        return false;
+      }
+     
+      if(form.pw.value.charAt(0) != form.pw.value.charAt(0).toUpperCase() 
+    || Number(form.pw.value.charAt(0)) || form.pw.value.charAt(0)=="-" 
+    || form.pw.value.charAt(0)=="_" || form.pw.value.charAt(0)=="*" || 
+    form.pw.value.charAt(0)=="#" || form.pw.value.charAt(0)=="&" || 
+    form.pw.value.charAt(0)==" "){
+        alert("Error: password must start with uppercase letter (A-Z)!");
+        return false;
+ 
+}
+    var i="1";
+      while(!Number(form.pw.value.charAt(i))){
+        i++;
+        if(i==8){
+        alert("Error: password must include at least one digit (0-9)!");
+        return false;
+        break;
+       }
+        else continue;
+     }
+    var i="1";
+      while(form.pw.value.charAt(i) !="-" && form.pw.value.charAt(i) !="_" && 
+       form.pw.value.charAt(i) !="#" && form.pw.value.charAt(i) !="&" &&
+       form.pw.value.charAt(i) !="*" || form.pw.value.charAt(i) ==" "){
+        i++;
+        if(i==8){
+        alert("Error: password must include a special character and no spaces!");
+        return false;
+        break;
+       }
+        else continue;
+     }
+      alert("You entered a valid password: " + form.pw.value);
+      alert("Thank you for your submition " + form.fname.value + ",we'll send you our notification day by day on this new added email.")
+    return true;
+  }
+
+</script>
+</body>
+</html>
