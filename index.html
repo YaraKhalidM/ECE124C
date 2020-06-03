@@ -75,7 +75,7 @@ li a:hover {
   <li><a href="GUCCI-PRADA.html">GUCCI-PRADA</a></li>
 </ul>
 <h1>The Most Stunning Fashion Sites on the web</h1>
-<form class="f" onsubmit="return checkPassword(this);" action="/action_page.php">
+<form class="f" onsubmit="return checkPassword(this);">
  <label for="fname">First Name</label><br>
   <input type="text" id="fname" name="fname" required><br>
  <label for="lname">Last Name</label><br>
@@ -113,7 +113,7 @@ notification.<pre></h5>
     || form.pw.value.charAt(0)=="_" || form.pw.value.charAt(0)=="*" || 
     form.pw.value.charAt(0)=="#" || form.pw.value.charAt(0)=="&" || 
     form.pw.value.charAt(0)==" "){
-        alert("Error: password must start with uppercase letter (A-Z)!");
+        alert("Error: password must start with uppercase letter (A-Z)! Check the password title, please.");
         return false;
  
 }
@@ -121,7 +121,7 @@ notification.<pre></h5>
       while(!Number(form.pw.value.charAt(i))){
         i++;
         if(i==8){
-        alert("Error: password must include at least one digit (0-9)!");
+        alert("Error: password must include at least one digit (0-9)! Check the password title, please.");
         return false;
         break;
        }
@@ -133,7 +133,7 @@ notification.<pre></h5>
        form.pw.value.charAt(i) !="*" || form.pw.value.charAt(i) ==" "){
         i++;
         if(i==8){
-        alert("Error: password must include a special character and no spaces!");
+        alert("Error: password must include a special character and no spaces! Check the password title, please.");
         return false;
         break;
        }
